@@ -139,5 +139,6 @@ spl = MetropolisHastings([0.0, 0.0])
 # Sample from the posterior.
 chain = sample(model, spl, 100000; param_names=["μ", "σ"])
 
+summarystats(chain)
 plot(chain; size=(840, 600))
 savefig("Tutorial-AbstarctMCMC.png")
